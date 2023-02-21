@@ -1,0 +1,22 @@
+<body>
+    <div class="center">
+        <h1>LogIn</h1>
+        <form [formGroup]="userLogInForm" (ngSubmit)="loginFormSubmit()" method="post" action="">
+            <div class="txt_field">
+                <input type="text" formControlName="Email" required>
+                <span></span>
+                <label for="">Email</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" formArrayName="Password" required>
+                <span></span>
+                <label for="">Password</label>
+            </div>
+            <div class="pass" routerLink="/forgot-password">Forgot Password</div>
+            <input type="submit" value="LogIn">
+            <div class="sign_link">
+                Not a Member <a routerLink="/signup">SignUp</a>
+            </div>
+        </form>
+    </div>
+</body>

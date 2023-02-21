@@ -1,0 +1,33 @@
+
+<body>
+    <div class="center">
+        <h1>SignUp</h1>
+        <form [formGroup]="userSignupForm" method="post" (ngSubmit)="signupFormSubmit()">
+            <div class="txt_field">
+                <input type="text" formControlName="firstName" required>
+                <span></span>
+                <label for="">firstName</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" formControlName="lastName" required>
+                <span></span>
+                <label for="">lastName</label>
+            </div>
+            <div class="txt_field">
+                <input type="email" formControlName="Email" required>
+                <span></span>
+                <label for="">Email</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" formControlName="Password" required>
+                <span></span>
+                <label for="">Password</label>
+            </div>
+            <div class="pass">Forgot Password</div>
+            <input type="submit" value="SignUp">
+            <div class="sign_link">
+                if already Member <a routerLink="/login">login</a>
+            </div>
+        </form>
+    </div>
+</body>
